@@ -1,9 +1,12 @@
 import React from "react";
+import './Home.css';
+import image from "./pl-hero.jpg";
+
 
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <img src={image} alt="Flower Picture"/>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text
