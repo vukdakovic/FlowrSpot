@@ -8,19 +8,18 @@ ul {
 }
 
 li {
-  float: right;
   font-family: Montserrat;
   font-style: normal;
-  line-height: 14px;
   font-weight: 500;
   font-size: 14px;
+  float: right;
+  line-height: 14px;
 }
 
-.flowrSpotLi {
+.flowr-spot-li {
   float: left;
   font-weight: bold;
   font-size: 20px;
-  color: #EAA79E
 }
 
 a {
@@ -30,11 +29,7 @@ a {
   text-decoration: none;
 }
 
-.flowrspotText {
-  color: #EAA79E;
-}
-
-.login {
+.red-color {
   color: #EAA79E;
 }
 

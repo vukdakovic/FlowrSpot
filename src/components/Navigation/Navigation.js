@@ -6,7 +6,7 @@ function Navigation(props) {
   return (
     <nav>
       <ul>
-        <li className="flowrSpotLi">
+        <li className="flowr-spot-li">
           <Link to="/">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0)">
@@ -21,14 +21,14 @@ function Navigation(props) {
                 </clipPath>
               </defs>
             </svg>
-            <span className="flowrspotText">FlowrSpot</span>
+            <span className="red-color">FlowrSpot</span>
           </Link>
         </li>
         <li>
           <Link className="account" to="/">New Account</Link>
         </li>
         <li>
-          <Link className="login" to="/">Login</Link>
+          <Link className="red-color" to="/">Login</Link>
         </li>
         <li>
           <Link to="/flowers">Favourites</Link>
