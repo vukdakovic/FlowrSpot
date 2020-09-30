@@ -4,6 +4,10 @@ import image from "./pl-hero.jpg";
 
 
 function Home() {
+  const [flowers, setFlowers] = React.useState(null);
+
+  fetch('https://flowrspot-api.herokuapp.com/api/v1/flowers').then(response => response.json()).then(data => setFlowers({ data });
+
   return (
     <div>
       <div className="div-image">
@@ -12,14 +16,11 @@ function Home() {
         <input/>
       </div>
       <div>
-        <div className="div-cell"></div>
-        <div className="div-cell"></div>
-        <div className="div-cell"></div>
-        <div className="div-cell"></div>
-        <div className="div-cell"></div>
-        <div className="div-cell"></div>
-        <div className="div-cell"></div>
-        <div className="div-cell"></div>
+      {
+        flowers.map((flower) =>
+          <div className="div-cell"></div>
+        );
+      }
       </div>
     </div>
   );
