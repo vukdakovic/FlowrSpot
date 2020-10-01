@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './Home.css';
 import image from "./pl-hero.jpg";
 
 
 function Home() {
-  const [flowers, setFlowers] = React.useState(null);
+  const [flowers, setFlowers] = useState({});
 
-  fetch('https://flowrspot-api.herokuapp.com/api/v1/flowers').then(response => response.json()).then(data => setFlowers({ data });
+  async function fetchData() {
+    const res = await fetch("https://flowrspot-api.herokuapp.com/api/v1/flowers");
+    res
+    .json()
+    .then(res => setFlowers(res));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -16,11 +25,7 @@ function Home() {
         <input/>
       </div>
       <div>
-      {
-        flowers.map((flower) =>
-          <div className="div-cell"></div>
-        );
-      }
+      {JSON.stringify(flowers)}
       </div>
     </div>
   );
